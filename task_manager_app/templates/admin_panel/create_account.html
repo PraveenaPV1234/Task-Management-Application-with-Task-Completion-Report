@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+</head>
+<body>
+    <h2>Create Account</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>Username:</label><input type="text" name="username"><br>
+        <label>Email:</label><input type="email" name="email"><br>
+        <label>Password:</label><input type="password" name="password"><br>
+        <label>Role:</label>
+        <select name="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select><br>
+        <input type="submit" value="Create">
+    </form>
+    <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+</body>
+</html>

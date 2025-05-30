@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Task List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Assigned To</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in tasks %}
+        <tr>
+          <td>{{ task.title }}</td>
+          <td>{{ task.assigned_to.username }}</td>
+          <td>{{ task.status }}</td>
+          <td>
+            <a href="{% url 'task_list' %}">View</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

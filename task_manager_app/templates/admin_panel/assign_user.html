@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Assign User to Admin</h2>
+<form method="POST" action="{% url 'assign_user' %}">
+    {% csrf_token %}
+    <label>Select User:</label>
+    <select name="user_id">
+        {% for user in users %}
+            <option value="{{ user.id }}">{{ user.username }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Select Admin:</label>
+    <select name="admin_id">
+        {% for admin in admins %}
+            <option value="{{ admin.id }}">{{ admin.username }}</option>
+        {% endfor %}
+    </select><br>
+    <button type="submit">Assign</button>
+</form>
+<p>Method: {{ request.method }}</p>
+{% endblock %}
