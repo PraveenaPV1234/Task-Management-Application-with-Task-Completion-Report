@@ -32,7 +32,7 @@ This Django project implements a Task Management System with the following featu
 | PUT    | `/tasks/<id>/`          | Mark task completed w/ report     |
 | GET    | `/tasks/<id>/report/`   | Admin/SuperAdmin view report      |
 
-## 🖥️ Admin Panel (HTML Templates)
+##  Admin Panel (HTML Templates)
 
 | Template               | Description                           |
 |------------------------|---------------------------------------|
