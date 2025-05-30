@@ -128,9 +128,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'rest_framework.authentication.SessionAuthentication',  # supports logged-in session (browser)
-        'rest_framework.authentication.BasicAuthentication',    # optional for testing
-        # Add token or JWT auth here if you use those
+        'rest_framework.authentication.SessionAuthentication',  
+        'rest_framework.authentication.BasicAuthentication',    
+        
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
